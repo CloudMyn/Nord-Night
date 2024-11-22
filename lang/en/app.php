@@ -3,7 +3,12 @@
 return [
 
     'welcome'       =>  'Welcome to :app_name.',
-    'simple page'   =>  'Simple Page',
     'settings'      =>  'Settings',
-    'Env Editor'    =>  'Env Editor',
+    'env_editor'    =>  'Env Editor',
+
+    'navigation' => [
+        'user_management' => 'User Management',
+        'user_table'      => 'Users Table',
+
+    ]
 ];

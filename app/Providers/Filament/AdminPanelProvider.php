@@ -2,6 +2,7 @@
 
 namespace App\Providers\Filament;
 
+use Althinect\FilamentSpatieRolesPermissions\FilamentSpatieRolesPermissionsPlugin;
 use App\Filament\Admin\Themes\SknorTheme;
 use App\Filament\Widgets\AccountWidget;
 use Filament\Http\Middleware\Authenticate;
@@ -97,12 +98,14 @@ class AdminPanelProvider extends PanelProvider
                     ->canViewThemesPage(fn() => true)
                     ->registerTheme(
                         [
-                            SknorTheme::class,
-                            // \Hasnayeen\Themes\Themes\Nord::class,
+                            // SknorTheme::class,
+                            \Hasnayeen\Themes\Themes\Nord::class,
                             // \Hasnayeen\Themes\Themes\Sunset::class,
                         ],
                         override: true,
                     ),
+
+                FilamentSpatieRolesPermissionsPlugin::make(),
 
                 EnvironmentIndicatorPlugin::make()
                     ->showBadge(true)
@@ -110,20 +113,23 @@ class AdminPanelProvider extends PanelProvider
                     ->showGitBranch(),
 
                 FilamentEnvEditorPlugin::make()
-                    ->navigationGroup(__('app.settings'))
-                    ->navigationLabel(__('app.Env Editor'))
+                    ->navigationGroup(fn () => __('app.settings'))
+                    ->navigationLabel(fn () => __('app.env_editor'))
                     ->navigationIcon('heroicon-o-cog-8-tooth')
                     ->navigationSort(1)
                     ->slug('env-editor')
             ])
-            ->spa()
+            ->spa(config('dashboard.panel.single_page_aplication'))
             ->databaseNotifications()
             ->authMiddleware([
                 Authenticate::class,
             ])
-            ->navigationItems([
-
-                // ...
-            ]);
+            ->navigationGroups([
+                __('app.navigation.user_management'),
+                __('filament-spatie-roles-permissions::filament-spatie.section.roles_and_permissions'),
+                __('app.settings'),
+            ])
+            ->favicon('/favicon.png')
+            ->topNavigation(config('dashboard.panel.top_navigation'));;
     }
 }

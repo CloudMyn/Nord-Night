@@ -3,7 +3,13 @@
 return [
 
     'welcome'       =>  'Selamat datang di :app_name.',
-    'simple page'   =>  'Halaman sederhana',
     'settings'      =>  'Pengaturan',
-    'Env Editor'    =>  'Editor Env',
+    'env_editor'    =>  'Konfigurasi',
+
+    'navigation' => [
+        'user_management' => 'Manajemen Pengguna',
+        'user_table'      => 'Tabel Pengguna',
+
+    ]
+
 ];

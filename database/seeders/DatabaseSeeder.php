@@ -20,5 +20,9 @@ class DatabaseSeeder extends Seeder
             'username' => 'admin',
             'email' => 'admin@mail.io',
         ]);
+
+        $this->call([
+            RoleSeeder::class,
+        ]);
     }
 }

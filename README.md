@@ -4,13 +4,15 @@
 
 ## Deskripsi
 
-Nord Night adalah aplikasi web yang dibangun dengan Laravel dan Filament, dirancang untuk memberikan pengalaman pengguna yang menarik dan interaktif. Aplikasi ini mengintegrasikan fitur-fitur modern untuk memudahkan pengguna dalam menjelajahi konten yang berkaitan dengan tema malam utara.
+Nord Night adalah starter pack aplikasi web yang dibangun dengan Laravel dan Filament. Proyek ini dirancang untuk memberikan pengalaman pengguna yang menarik dan interaktif, serta menyediakan fondasi yang kuat untuk pengembangan aplikasi web yang lebih lanjut. Aplikasi ini mengintegrasikan fitur-fitur modern untuk memudahkan pengguna dalam menjelajahi konten yang berkaitan dengan tema malam utara.
 
 ## Fitur Utama
 
 - **Antarmuka Pengguna yang Menarik**: Desain yang responsif dan modern untuk pengalaman pengguna yang optimal.
 - **Manajemen Pengguna**: Fitur untuk mendaftar, masuk, dan mengelola profil pengguna.
-- **Modern UI**: UI yang modern dan elegan, dengan thema dark & cold.
+- **Manajemen Error**: Fitur untuk melihat error yang terjadi di website.
+- **Manajemen .ENV**: Fitur untuk memudahkan melakukan modifikasi environment variable di website.
+- **Komponen Fleksibel**: Komponen siap pakai yang sangat flexible, developer dapat dengan mudah melakukan kostumisasi dengan bebas.
 
 ## Prerequisites
 
